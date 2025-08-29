@@ -1,5 +1,5 @@
 import { prisma } from '../db/prismaClient.js';
-import { invalidateAnalyticsForUser } from '../middlewares/cache.js';
+import { invalidateAnalyticsAll, invalidateAnalyticsForUser } from '../middlewares/cache.js';
 
 export async function listTransactions({ user, query }) {
   const {
